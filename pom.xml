@@ -12,11 +12,11 @@
 		<relativePath />
 	</parent>
 
-	<groupId>com.mycompany</groupId>
-	<artifactId>Process_Pixels</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<groupId>My_group</groupId>
+	<artifactId>My_Plugin</artifactId>
+	<version>0.1.0</version>
 
-	<name>Process Pixels</name>
+	<name>My ImageJ plugin</name>
 	<description>A Maven project implementing an ImageJ 1.x plugin.</description>
 	<url>http://mycompany.com/imagej/process-pixels/</url>
 	<inceptionYear>2012</inceptionYear>
@@ -48,36 +48,12 @@
 	</developers>
 	<contributors>
 		<contributor>
-			<name>Johannes Schindelin</name>
-			<url>https://imagej.net/User:Schindelin</url>
+			<name>Jyothi</name>
+			<url>https://imagej.net/</url>
 			<roles><role>founder</role></roles>
 			<properties><id>dscho</id></properties>
 		</contributor>
-		<contributor>
-			<name>Olivier Burri</name>
-			<url>https://imagej.net/User:Oburri</url>
-			<properties><id>lacan</id></properties>
-		</contributor>
-		<contributor>
-			<name>Mark Hiner</name>
-			<url>https://imagej.net/User:Hinerm</url>
-			<properties><id>hinerm</id></properties>
-		</contributor>
-		<contributor>
-			<name>Jules Maselbas</name>
-		</contributor>
-		<contributor>
-			<name>Kota Miura</name>
-			<url>https://imagej.net/User:Miura</url>
-			<properties><id>miura</id></properties>
-		</contributor>
-		<contributor>
-			<name>Yili Zhao</name>
-			<url>https://imagej.net/User:Panovr</url>
-			<properties><id>panovr</id></properties>
-		</contributor>
 	</contributors>
-
 	<mailingLists>
 		<mailingList>
 			<name>Image.sc Forum</name>
@@ -101,11 +77,11 @@
 
 	<properties>
 		<package-name>com.mycompany.imagej</package-name>
-		<main-class>com.mycompany.imagej.Process_Pixels</main-class>
+		<main-class>com.mycompany.imagej.My_Plugin</main-class>
 		<license.licenseName>bsd_2</license.licenseName>
 		<license.copyrightOwners>My Company, Inc.</license.copyrightOwners>
 	</properties>
-
+	
 	<dependencies>
 		<dependency>
 			<groupId>net.imagej</groupId>

@@ -1,10 +1,3 @@
-/*
- * To the extent possible under law, the ImageJ developers have waived
- * all copyright and related or neighboring rights to this tutorial code.
- *
- * See the CC0 1.0 Universal license for details:
- *     http://creativecommons.org/publicdomain/zero/1.0/
- */
 
 package com.mycompany.imagej;
 
@@ -15,13 +8,8 @@ import ij.gui.GenericDialog;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
 
-/**
- * A template for processing each pixel of either
- * GRAY8, GRAY16, GRAY32 or COLOR_RGB images.
- *
- * @author Johannes Schindelin
- */
-public class Process_Pixels implements PlugInFilter {
+
+public class ImageJ_Plugin implements PlugInFilter {
 	protected ImagePlus image;
 
 	// image property members
@@ -75,17 +63,6 @@ public class Process_Pixels implements PlugInFilter {
 
 	/**
 	 * Process an image.
-	 * <p>
-	 * Please provide this method even if {@link ij.plugin.filter.PlugInFilter} does require it;
-	 * the method {@link ij.plugin.filter.PlugInFilter#run(ij.process.ImageProcessor)} can only
-	 * handle 2-dimensional data.
-	 * </p>
-	 * <p>
-	 * If your plugin does not change the pixels in-place, make this method return the results and
-	 * change the {@link #setup(java.lang.String, ij.ImagePlus)} method to return also the
-	 * <i>DOES_NOTHING</i> flag.
-	 * </p>
-	 *
 	 * @param image the image (possible multi-dimensional)
 	 */
 	public void process(ImagePlus image) {
@@ -155,23 +132,18 @@ public class Process_Pixels implements PlugInFilter {
 	}
 
 	public void showAbout() {
-		IJ.showMessage("ProcessPixels",
+		IJ.showMessage("ImageJPlugin",
 			"a template for processing each pixel of an image"
 		);
 	}
 
 	/**
-	 * Main method for debugging.
-	 *
-	 * For debugging, it is convenient to have a method that starts ImageJ, loads
-	 * an image and calls the plugin, e.g. after setting breakpoints.
-	 *
+	 * Main method 
 	 * @param args unused
 	 */
 	public static void main(String[] args) throws Exception {
 		// set the plugins.dir property to make the plugin appear in the Plugins menu
-		// see: https://stackoverflow.com/a/7060464/1207769
-		Class<?> clazz = Process_Pixels.class;
+		Class<?> clazz = ImageJ_Plugin.class;
 		java.net.URL url = clazz.getProtectionDomain().getCodeSource().getLocation();
 		java.io.File file = new java.io.File(url.toURI());
 		System.setProperty("plugins.dir", file.getAbsolutePath());
